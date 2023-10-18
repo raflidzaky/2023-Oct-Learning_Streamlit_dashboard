@@ -12,8 +12,10 @@ dashboard_dataset = pd.read_csv('dashboard_dataset.csv', parse_dates=[2, 3])
 
 # Set Workfile untuk Code Streamlit
 # Seluruh code yang digunakan untuk build elements hingga layout dashboard akan diletakkan di workfile ini
-%%writefile app.py # penamaan file .py dapat disesuaikan dengan kebutuhan
+# penamaan file .py dapat disesuaikan dengan kebutuhan
+%%writefile app.py 
 import streamlit as st
+import matplotlib.pyplot as plt
 
 # Mendapatkan Endpoint IP untuk LocalTunnel
 !wget -q -O - ipv4.icanhazip.com
