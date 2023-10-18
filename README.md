@@ -1,4 +1,5 @@
 # Dashboard Streamlit 📈
+Pada markdown ini, terlampir cara menjalankan dashboard, URL Cloud, dan mock dashboard.
 
 # Set Environment di Google Colab
 ```
@@ -16,6 +17,8 @@ dashboard_dataset = pd.read_csv('dashboard_dataset.csv', parse_dates=[2, 3])
 %%writefile app.py 
 import streamlit as st
 import matplotlib.pyplot as plt
+import datetime as dt
+from babel.numbers import format_currency
 
 # Mendapatkan Endpoint IP untuk LocalTunnel
 !wget -q -O - ipv4.icanhazip.com
