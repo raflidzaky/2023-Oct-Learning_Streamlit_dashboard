@@ -67,3 +67,17 @@ for i, count in enumerate(freight_value_per_bulan['Rerata']):
 
 st.pyplot(fig) 
 
+c2 = st.columns((9, 3))
+top_3_product = (dashboard_dataset.groupby(('product_category_name')).size().sort_values(ascending=False)).head(3)
+top_3_product_df = pd.DataFrame(top_3_product).reset_index(drop=False)
+top_3_product_df.columns = ['Kategori Produk', 'Total']
+
+figure, ax = plt.subplots(figsize=[12, 5])
+top_3_product_df.plot.bar(color='blue', ax=ax)
+
+ax.set_xticklabels(top_3_product_df['Kategori Produk'], rotation=0)
+ax.set_ylabel('Total Sales')
+ax.set_xlabel('Kategori Produk')
+ax.bar_label(ax.containers[0], label_type='edge')
+
+st.pyplot(figure)
