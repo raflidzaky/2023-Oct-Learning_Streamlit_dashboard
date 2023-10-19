@@ -30,7 +30,7 @@ from babel.numbers import format_currency
 ```
 
 # URL Dashboard pada Streamlit Community Cloud 
-https://dashboard-app-u2hzj7c3dofxykpegebdbv.streamlit.app/
+https://dashboard-app-ujcozkwaomu8jpwccujwu2.streamlit.app/
 
 # Mock Dashboard
 ![Screenshot (2907)](https://github.com/raflidzaky/dashboard-streamlit/assets/104545005/4b839849-dfba-4c9d-a10a-d8e457b80655)
